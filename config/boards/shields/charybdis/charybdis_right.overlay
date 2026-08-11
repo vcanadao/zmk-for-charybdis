@@ -5,6 +5,7 @@
  */
  
 #include "charybdis.dtsi"
+#include <input/processors.dtsi>
 
 &uicr {
     nfct-pins-as-gpios;
@@ -115,9 +116,13 @@
 
 / {
     trackball_listener {
-        compatible = "zmk,input-listener";
-        device = <&trackball>;
-    };
+	compatible = "zmk,input-listener";
+	device = <&trackball>;
+	input-processors = <&zip_xy_scaler 0 1>, <&zip_scroll_scaler 0 1>;
+
+	trackball_layer4 {
+		layers = <4>;
+		input-processors = <&zip_xy_scaler 1 1>, <&zip_scroll_scaler 1 1>;
+	};
 };
-
-
+};
