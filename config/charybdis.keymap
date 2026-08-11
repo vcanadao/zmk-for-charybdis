@@ -224,28 +224,28 @@
 
         layer_0 {
             bindings = <
-            &kp Q &kp W &kp E &kp R &kp T &td_ene &td_y &kp I &kp O &kp P
-&hm_shift LSHFT A &hm LALT S &hm LCTRL D &hm LGUI F &kp G &kp H &hm RGUI J &hm RCTRL K &hm LALT L &td_u_at
-&kp Z &kp X &kp C &kp V &kp B &kp N &kp M &kp COMMA &kp DOT &to_l3
-&lt 1 BSPC &lt 2 TAB &to_l3 &lt 2 RET &lt 1 SPACE
+            &kp Q                &kp W            &kp E            &kp R             &kp T                 &td_ene           &td_y             &kp I             &kp O             &kp P
+&hm_shift LSHFT A    &hm LALT S       &hm LCTRL D      &hm LGUI F        &kp G                 &kp H             &hm RGUI J        &hm RCTRL K       &hm LALT L        &td_u_at
+&kp Z                &kp X            &kp C            &kp V             &kp B                 &kp N             &kp M             &kp COMMA         &kp DOT           &to_l3
+                                                  &lt 1 BSPC       &lt 2 TAB         &to_l3                &lt 2 RET         &lt 1 SPACE
             >;
         };
 
         layer_1 {
             bindings = <
-            &kp ESC &m_backticks &m_s_quotes &m_quotes &kp LG(LS(N4)) &none &td_ique_ques &td_comm_semi &td_sl_bs &kp ESC
-&none &m_braces &m_brackets &m_parens &none &m_quotes &td_perc_caret &td_dot_coln &td_pl_as &td_mi_un
-&none &none &none &m_angle &none &m_s_quotes &td_amp_pipe &td_eql_neq &td_dlr_hash &td_comm_dot
-&to_l0 &to_l0 &kp BSPC &kp RET &kp SPACE
+            &kp ESC              &m_backticks     &m_s_quotes      &m_quotes         &kp LG(LS(N4))        &none             &td_ique_ques     &td_comm_semi     &td_sl_bs         &kp ESC
+&none                &m_braces        &m_brackets      &m_parens         &none                 &m_quotes         &td_perc_caret    &td_dot_coln      &td_pl_as         &td_mi_un
+&none                &none            &none            &m_angle          &none                 &m_s_quotes       &td_amp_pipe      &td_eql_neq       &td_dlr_hash      &td_comm_dot
+                                                  &to_l0           &to_l0            &kp BSPC              &kp RET           &kp SPACE
             >;
         };
 
         layer_2 {
             bindings = <
-            &none &kp N7 &kp N8 &kp N9 &kp HOME &kp END &none &none &none &kp PG_UP
-&none &kp N4 &kp N5 &kp N6 &kp N0 &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp PG_DN
-&none &kp N1 &kp N2 &kp N3 &none &none &none &none &to_l0 &none
-&to_l0 &to_l0 &kp BSPC &kp RET &kp SPACE
+            &none                &kp N7           &kp N8           &kp N9            &kp HOME              &kp END           &none             &none             &none             &kp PG_UP
+&none                &kp N4           &kp N5           &kp N6            &kp N0                &kp LEFT          &kp DOWN          &kp UP            &kp RIGHT         &kp PG_DN
+&none                &kp N1           &kp N2           &kp N3            &none                 &none             &none             &none             &to_l0            &none
+                                                  &to_l0           &to_l0            &kp BSPC              &kp RET           &kp SPACE
             >;
         };
 
