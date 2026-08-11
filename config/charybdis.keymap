@@ -227,7 +227,7 @@
             &kp Q                &kp W            &kp E            &kp R             &kp T                 &td_ene           &td_y             &kp I             &kp O             &kp P
             &hm_shift LSHFT A    &hm LALT S       &hm LCTRL D      &hm LGUI F        &kp G                 &kp H             &hm RGUI J        &hm RCTRL K       &hm LALT L        &td_u_at
             &kp Z                &kp X            &kp C            &kp V             &kp B                 &kp N             &kp M             &kp COMMA         &kp DOT           &to_l3
-                                                  &lt 1 BSPC       &lt 2 TAB         &to_l3                &lt 2 RET         &lt 1 SPACE
+                                                  &lt 1 BSPC       &lt 3 TAB         &to_l4                &lt 2 RET         &lt 1 SPACE
             >;
         };
 
