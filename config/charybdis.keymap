@@ -204,6 +204,15 @@
             bindings = <&mo_l4_c>, <&kp>;
         };
 
+        lt_bspc: lt_bspc {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            bindings = <&mo>, <&kp>;
+        };
+
         td_u_at:       td_u_at       { compatible = "zmk,behavior-tap-dance"; #binding-cells = <0>; tapping-term-ms = <160>; bindings = <&kp U>, <&kp ES_AT>; };
         td_perc_caret: td_perc_caret { compatible = "zmk,behavior-tap-dance"; #binding-cells = <0>; tapping-term-ms = <150>; bindings = <&kp ES_PERC>, <&kp ES_CARET>; };
         td_dot_coln:   td_dot_coln   { compatible = "zmk,behavior-tap-dance"; #binding-cells = <0>; tapping-term-ms = <150>; bindings = <&kp ES_DOT>,  <&kp ES_COLN>;  };
@@ -229,7 +238,7 @@
             &kp Q                &kp W            &kp E            &kp R             &kp T                 &td_y             &td_u_at          &kp I             &kp O             &kp P
             &hm_shift LSHFT A    &hm LALT S       &hm LCTRL D      &hm LGUI F        &kp G                 &kp H             &hm RGUI J        &hm RCTRL K       &hm LALT L        &hm_shift RSHFT ES_QUES
             &kp Z                &kp X            &kp C            &kp V             &kp B                 &kp N             &kp M             &kp COMMA         &kp DOT           &to_l3
-                                                  &lt 1 BSPC       &lt 3 TAB         &to_l4                &lt 2 RET         &lt 1 SPACE
+                                                  &lt_bspc 1 BSPC  &lt 3 TAB         &to_l4                &lt 2 RET         &lt 1 SPACE
             >;
         };
 
