@@ -36,7 +36,7 @@
 #define ES_LABK   GRAVE
 #define ES_RABK   LS(GRAVE)
 #define ES_QUES   LS(MINUS)
-#define ES_BSLH   RA(LS(N7))
+#define ES_BSLH   RA(NON_US_BSLH)
 #define ES_DLR    LS(N4)
 #define ES_IQUE   LS(EQUAL)
 
@@ -244,7 +244,7 @@
 
         layer_1 {
             bindings = <
-            &kp ESC              &m_backticks     &m_s_quotes      &m_quotes         &kp LG(LS(N4))        &none             &td_ene           &td_comm_semi     &td_pl_as         &kp ESC
+            &kp ESC              &m_backticks     &m_s_quotes      &m_quotes         &kp LG(LS(N4))        &none             &td_ene           &td_mi_un         &td_pl_as         &kp ESC
             &none                &m_braces        &m_brackets      &m_parens         &none                 &m_quotes         &td_dot_coln      &td_comm_semi     &td_amp_pipe      &td_sl_bs
             &none                &none            &none            &m_angle          &none                 &m_s_quotes       &td_eql_neq       &td_dlr_hash      &td_ique_ques     &td_perc_caret
                                                   &to_l0           &to_l0            &kp BSPC              &kp RET           &kp SPACE
