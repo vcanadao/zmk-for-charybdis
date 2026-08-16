@@ -39,6 +39,13 @@
 #define ES_BSLH   RA(NON_US_BSLH)
 #define ES_DLR    LS(N4)
 #define ES_IQUE   LS(EQUAL)
+#define ES_LBRC   RA(SQT)
+#define ES_RBRC   RA(BSLH)
+#define ES_LBKT   RA(LBKT)
+#define ES_RBKT   RA(RBKT)
+#define ES_DQUO   LS(N2)
+#define ES_SQUO   MINUS
+#define ES_GRV_D  LBKT
 
 / {
     macros {
@@ -140,6 +147,9 @@
         m_s_quotes:  m_s_quotes  { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp SQT>, <&kp SQT>, <&kp LEFT>; };
         m_backticks: m_backticks { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp LS(LBKT)>, <&kp LS(LBKT)>, <&kp LEFT>; };
         m_tilde:     m_tilde     { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp ES_TILDE>, <&kp SPACE>; };
+        m_grave:     m_grave     { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp ES_GRV_D>, <&kp SPACE>; };
+        m_caret:     m_caret     { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp ES_CARET>, <&kp SPACE>; };
+
     };
 
     behaviors {
@@ -238,22 +248,21 @@
             &kp Q                &kp W            &kp E            &kp R             &kp T                 &td_y             &td_u_at          &kp I             &kp O             &kp P
             &hm_shift LSHFT A    &hm LALT S       &hm LCTRL D      &hm LGUI F        &kp G                 &kp H             &hm RGUI J        &hm RCTRL K       &hm LALT L        &hm_shift RSHFT ES_QUES
             &kp Z                &kp X            &kp C            &kp V             &kp B                 &kp N             &kp M             &kp COMMA         &kp DOT           &to_l3
-                                                  &lt_bspc 1 BSPC  &lt 3 TAB         &to_l4                &lt 2 RET         &lt 1 SPACE
+                                                  &lt_bspc 1 BSPC  &lt 2 TAB         &to_l4                &lt 2 RET         &lt 1 SPACE
             >;
         };
-
         layer_1 {
             bindings = <
-            &kp ESC              &m_backticks     &m_s_quotes      &m_quotes         &kp LG(LS(N4))        &none             &td_ene           &td_mi_un         &td_pl_as         &kp ESC
-            &none                &m_braces        &m_brackets      &m_parens         &none                 &m_quotes         &td_dot_coln      &td_comm_semi     &td_amp_pipe      &td_sl_bs
-            &none                &none            &none            &m_angle          &none                 &m_s_quotes       &td_eql_neq       &td_dlr_hash      &td_ique_ques     &td_perc_caret
+            &kp ES_HASH          &m_grave         &kp ES_LBRC      &kp ES_RBRC       &kp ES_AMPS           &kp ES_PERC       &kp ES_QUES       &kp ES_LABK       &kp ES_SLSH       &kp ES_SEMI
+            &kp ES_DLR           &kp ES_DQUO      &kp ES_LPAR      &kp ES_RPAR       &kp ES_AT             &kp ES_COLN       &kp ES_EQL        &kp ES_RABK       &kp ES_MINS       &kp ES_UNDS
+            &kp ES_BSLH          &kp ES_SQUO      &kp ES_LBKT      &kp ES_RBKT       &kp ES_PIPE           &m_tilde          &kp ES_ASTR       &kp ES_PLUS       &kp ES_EXCL       &kp SEMI
                                                   &to_l0           &to_l0            &kp BSPC              &kp RET           &kp SPACE
             >;
         };
 
         layer_2 {
             bindings = <
-            &none                &kp N7           &kp N8           &kp N9            &kp HOME              &kp END           &none             &none             &none             &kp PG_UP
+            &kp ESC              &kp N7           &kp N8           &kp N9            &kp HOME              &kp END           &m_caret          &none             &none             &kp PG_UP
             &none                &kp N4           &kp N5           &kp N6            &kp N0                &kp LEFT          &kp DOWN          &kp UP            &kp RIGHT         &kp PG_DN
             &none                &kp N1           &kp N2           &kp N3            &none                 &none             &none             &none             &to_l0            &none
                                                   &to_l0           &to_l0            &kp BSPC              &kp RET           &kp SPACE
